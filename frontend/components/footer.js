@@ -7,8 +7,8 @@ const Footer = () => {
                 <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
                     <span className="text-sm  sm:text-center text-gray-400">
                         
-                    "Frank" - Blockchain Developer , "Diwakar" - Blockchain Developer
- , "Anade Davis" - Blockchain Architect
+                   {` "Frank" - Blockchain Developer , "Diwakar" - Blockchain Developer
+ , "Anade Davis" - Blockchain Architect `}
                      
                     </span>
                   
