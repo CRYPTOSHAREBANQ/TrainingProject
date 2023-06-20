@@ -17,7 +17,7 @@ export default async function handler(req, res) {
     // const address = req.params.wallet;
     const response = await axios
       .post(
-        `https://rest.cryptoapis.io/wallet-as-a-service/wallets/64764298dd225800072d91b0/ethereum/goerli/addresses`,
+        `https://rest.cryptoapis.io/wallet-as-a-service/wallets/628364e2c09ab200073d70c5/ethereum/goerli/addresses`,
         {
           data: {
             item: {
@@ -28,7 +28,7 @@ export default async function handler(req, res) {
         {
           headers: {
             "Content-Type": "application/json",
-            "X-API-Key": "33b2d073b8a2828c996e1aabdc694680bec64a2b",
+            "X-API-Key": "72b793e11a85dd231d46fc3a3f73d274a834b475",
           },
         }
       )
