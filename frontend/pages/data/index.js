@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import Nav from "../../components/nav";
 import Footer from "../../components/footer";
 
-// export const getStaticProps = async () => {
-//   const res = await fetch(`http://localhost:3000/api/walletAddress`); // change the wrl according to domain
-//   const walletAddress = await res.json();
-//   return { props: { walletAddress } };
-// };
+export const getStaticProps = async () => {
+  const res = await fetch(`https://unrivaled-bunny-5b8fc8.netlify.app/api/walletAddress`); // change the wrl according to domain
+  const walletAddress = await res.json();
+  return { props: { walletAddress } };
+};
 
 const TransactionData = ({ walletAddress }) => {
   console.log(walletAddress);
