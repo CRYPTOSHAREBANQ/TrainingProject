@@ -9,7 +9,7 @@ export const getStaticProps = async () => {
 };
 
 const TransactionData = ({ walletAddress }) => {
-  console.log(walletAddress);
+  // console.log(walletAddress);
 
   return (
     <>
@@ -24,7 +24,7 @@ const TransactionData = ({ walletAddress }) => {
                   Wallet Address :-
                 </h5>
                 <p className=" text-sm text-gray-300">
-                  {/* {walletAddress.address} */}
+                  {walletAddress.address}
                 </p>
                 <br />
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-300">
