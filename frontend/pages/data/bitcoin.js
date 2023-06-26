@@ -2,11 +2,11 @@ import React from "react";
 import Nav from "../../components/nav";
 import Footer from "../../components/footer";
 
-// export const getStaticProps = async () => {
-//   const res = await fetch(`http://localhost:3000/api/bitcoin`); // change the wrl according to domain
-//   const walletAddress = await res.json();
-//   return { props: { walletAddress } };
-// };
+export const getStaticProps = async () => {
+  const res = await fetch(`http://main--sweet-kitsune-41c1a1.netlify.app/api/bitcoin`); // change the wrl according to domain
+  const walletAddress = await res.json();
+  return { props: { walletAddress } };
+};
 
 const TransactionData = ({ walletAddress }) => {
   // console.log(walletAddress);
@@ -24,7 +24,7 @@ const TransactionData = ({ walletAddress }) => {
                   Wallet Address :-
                 </h5>
                 <p className=" text-sm text-gray-300">
-                  {/* {walletAddress.address} */}
+                  {walletAddress.address}
                 </p>
                 <br />
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-300">
