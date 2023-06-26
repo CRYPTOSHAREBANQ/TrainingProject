@@ -1,6 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
-import cors from "cors"; 
+import cors from "cors";
 import axios from "axios";
 
 const app = express();
@@ -17,14 +17,15 @@ export default async function handler(req, res) {
     // const address = req.params.wallet;
     const response = await axios
       .post(
-        `https://rest.cryptoapis.io/wallet-as-a-service/wallets/628364e2c09ab200073d70c5/ethereum/goerli/addresses`,
+        `https://rest.cryptoapis.io/wallet-as-a-service/wallets/628364e2c09ab200073d70c5/bitcoin/testnet/addresses`
+         ,
         {
           data: {
             item: {
               label: "wallet address",
             },
           },
-        },
+        },  
         {
           headers: {
             "Content-Type": "application/json",

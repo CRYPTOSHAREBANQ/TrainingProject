@@ -1,24 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import Nav from "../../components/nav";
 import Footer from "../../components/footer";
 
 export const getStaticProps = async () => {
-  const res = await fetch(`https://unrivaled-bunny-5b8fc8.netlify.app/api/walletAddress`); // change the wrl according to domain
+  const res = await fetch(`http://localhost:3000/api/bitcoin`); // change the wrl according to domain
   const walletAddress = await res.json();
   return { props: { walletAddress } };
 };
 
 const TransactionData = ({ walletAddress }) => {
   // console.log(walletAddress);
-
-  const token = [
-    { Name :"USD Tether" ,symbol: "USDT"},
-    { Name :"USD Coin" ,symbol: " USDC"},
-    { Name :"Binance Coin" ,symbol: "BNB"},
-    { Name :"Uniswap" ,symbol: "UNI"},
-    { Name :"Aave Coin" ,symbol: "AAVE"},
-    { Name :"Chainlink" ,symbol: "LINK"},
-  ]
 
   return (
     <>
@@ -39,14 +30,7 @@ const TransactionData = ({ walletAddress }) => {
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-300">
                   Tokens :-
                 </h5>
-                  {token.map((element)=>{
-                    return(
-                      <>
-                        <div className="text-gray-300 text-sm">{element.symbol} - {element.Name}</div>
-                      </>
-                    )
-                  })}
-                
+                <p className=" text-sm text-gray-300">BTC</p>
               </div>
             </div>
           </div>
