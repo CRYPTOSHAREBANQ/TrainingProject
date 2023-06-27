@@ -5,7 +5,7 @@ import Footer from "../../components/footer";
 export const getStaticProps = async () => {
   const res = await fetch(`http://main--sweet-kitsune-41c1a1.netlify.app/api/bitcoin`); // change the wrl according to domain
   const walletAddress = await res.json();
-  return { props: { walletAddress } };
+  return { props: { walletAddress } , revalidate: 1 };
 };
 
 const TransactionData = ({ walletAddress }) => {
